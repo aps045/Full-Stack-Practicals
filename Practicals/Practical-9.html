@@ -12,13 +12,36 @@
             margin: 0px;
         }
         
+        html {
+            scroll-padding-top: 70px;
+            scroll-behavior: smooth;
+        }
+        
         body {
             background-color: darkkhaki;
         }
         
-        html {
-            scroll-padding-top: 70px;
-            scroll-behavior: smooth;
+        h3 {
+            font-size: 22px;
+            font-weight: 560;
+            font-family: sans-serif;
+            text-align: center;
+        }
+        
+        h1 {
+            display: flex;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 48px;
+            font-family: Cambria;
+            padding-top: 1%;
+        }
+        
+        p {
+            font-size: 20px;
+            font-family: Arial;
+            padding: 5%;
+            padding-bottom: 2%;
         }
         
         .container {
@@ -27,6 +50,11 @@
             margin: auto;
             box-sizing: border-box;
         }
+        /* 
+        
+            HEADER SECTION 
+        
+        */
         
         .header {
             position: fixed;
@@ -76,6 +104,11 @@
             float: right;
             padding-right: 20px;
         }
+        /*
+        
+            BANNER SECTION 
+        
+        */
         
         .banner img {
             margin-top: 90px;
@@ -89,13 +122,6 @@
             background-position: center;
         }
         
-        h3 {
-            font-size: 22px;
-            font-weight: 560;
-            font-family: sans-serif;
-            text-align: center;
-        }
-        
         h2 {
             font-size: 72px;
             font-family: sans-serif;
@@ -104,33 +130,32 @@
             top: 120px;
             margin-left: 150px;
         }
+        /* 
         
-        h1 {
-            display: flex;
-            justify-content: center;
-            font-weight: 600;
-            font-size: 48px;
-            font-family: Cambria;
-            padding-top: 1%;
-        }
+            TEAM SECTION 
         
-        p {
-            font-size: 20px;
-            font-family: Arial;
-            padding: 5%;
-            padding-bottom: 2%;
-        }
+        */
         
         .circle img {
             border-radius: 50%;
             padding: 2% 2.8%;
         }
+        /*
+        
+            ABOUT US SECTION
+        
+        */
         
         .main {
             height: 960px;
             width: 100%;
             display: flex;
         }
+        /* 
+        
+            ABOUT PROJECT SECTION i.e. LEFT SIDE
+        
+        */
         
         .main .left {
             height: 100%;
@@ -153,6 +178,11 @@
             font-size: 20px;
             color: white;
         }
+        /* 
+        
+            PROJECT SECTION i.e. RIGHT SIDE
+        
+        */
         
         .main .right {
             position: relative;
@@ -170,6 +200,11 @@
             margin: 10px 0px 0px 25%;
             font-family: sans-serif;
         }
+        /* 
+        
+            TECHNOLOGIES USED SECTION
+        
+        */
         
         .techno {
             display: flex;
@@ -183,6 +218,11 @@
             border-radius: 10px;
             height: 200px;
         }
+        /* 
+        
+            FOR BOXES 
+        
+        */
         
         .html {
             display: inline-block;
@@ -216,6 +256,11 @@
         .html a:hover {
             background: rgb(81, 83, 218);
         }
+        /* 
+
+            CONTACT SECTION 
+        
+        */
         
         .footer-content {
             width: 100%;
@@ -231,19 +276,44 @@
             transition: all 0.8s;
         }
         
-        .footer-content p a:hover {
-            background: rgb(221, 80, 80);
+        .footer a {
+            color: black;
+            background-color: khaki;
+            padding: 0px;
+            border-radius: 10%;
+            text-decoration: none;
         }
         
+        .footer-content p a:hover {
+            background: rgb(221, 80, 80);
+            padding: 20px;
+            background-color: white;
+            border-radius: 50%;
+        }
+        /* 
+        
+            FIRST BREAKPOINT i.e. 801px - 1200px 
+        
+        */
+        
         @media (min-width: 801px) and (max-width: 1200px) {
+            /* 
+            
+                TEAM SECTION 
+            
+            */
             .circle img {
                 border-radius: 50%;
                 padding: 2% 10%;
             }
+            /* 
+            
+                BOXES FROM TECHNOLOGIES USED SECTION
+                
+            */
             .html {
                 display: inline-block;
                 margin: 1.5% 7% 0% 6.5%;
-                /* margin: auto; */
                 width: 288px;
                 background: rgb(218, 208, 208);
                 border-radius: 10px;
@@ -251,14 +321,29 @@
                 transition: all 0.4s;
             }
         }
+        /* 
+        
+            SECOND BREAKPOINT i.e. 601px - 800px 
+            
+        */
         
         @media (min-width: 601px) and (max-width:800px) {
+            /* 
+            
+                HEADER SECTION 
+                
+            */
             .header {
                 width: 100%;
                 background-color: grey;
                 position: fixed;
                 height: 70px;
             }
+            /* 
+            
+                SIDE BAR SECTION 
+                
+            */
             .show-btn {
                 display: block;
             }
@@ -288,10 +373,20 @@
                 right: 20px;
                 top: 10px;
             }
+            /* 
+            
+                TEAMS SECTION 
+                
+            */
             .circle img {
                 border-radius: 50%;
                 padding: 2% 5.6%;
             }
+            /* 
+            
+                BOXES FROM TECHNOLOGIES USED SECTION 
+                
+            */
             .html {
                 display: inline-block;
                 margin: 1.5% 0px 0% 36px;
@@ -302,8 +397,18 @@
                 transition: all 0.4s;
             }
         }
+        /* 
+        
+            SECOND BREAKPOINT i.e. 601px - 800px 
+            
+        */
         
         @media (max-width: 600px) {
+            /* 
+            
+                SIDE BAR SECTION 
+                
+            */
             .show-btn {
                 display: block;
             }
@@ -333,19 +438,51 @@
                 right: 20px;
                 top: 10px;
             }
+            /* 
+            
+                BANNER SECTION 
+                
+            */
             .banner img {
-                width: 600px;
+                width: 630px;
             }
-            .main {
+            h2 {
+                margin-left: 36px;
+                font-size: 50px;
+            }
+            /* 
+            
+                TEAMS SECTION 
+                
+            */
+            .team h1 {
                 width: 600px;
+                padding: 10px 10px 5px;
             }
             .circle img {
                 border-radius: 50%;
-                padding: 2% 32%;
+                padding: 2% 200px;
             }
+            /* 
+            
+                ABOUT US SECTION 
+                
+            */
+            .aboutus h1 {
+                width: 600px;
+                padding: 10px 10px 5px;
+            }
+            .main {
+                width: 628px;
+            }
+            /* 
+            
+                TECHNOLOGIES USED SECTION 
+                
+            */
             .tech h1 {
-                padding: 10px 50px 5px;
-                margin-right: -20px;
+                width: 600px;
+                padding: 10px 15px 5px;
             }
             .html {
                 display: inline-block;
@@ -356,8 +493,13 @@
                 font-family: sans-serif;
                 transition: all 0.4s;
             }
+            /* 
+            
+                CONTACT SECTION 
+                
+            */
             .footer {
-                width: 600px;
+                width: 628px;
             }
         }
     </style>
@@ -387,7 +529,7 @@
         </div>
         <div class="banner">
             <img src="../Images/Practical-8/image.jpg" alt="Banner Image">
-            <h2>Practical - 9</h2>
+            <h2>Practical-9</h2>
         </div>
         <div class="team">
             <a name="teams">
@@ -400,9 +542,11 @@
                 <img src="../Images/Practical-8/4.png">;
             </div>
         </div>
-        <a name="about">
-            <h1>About Us</h1>
-        </a>
+        <div class="aboutus">
+            <a name="about">
+                <h1>About Us</h1>
+            </a>
+        </div>
         <div class="main">
             <div class="left">
                 <h3>About Project</h3>
@@ -483,12 +627,12 @@
             </a>
             <div class="footer-content ">
                 <div>
-                    <p>Coypright &copy; Reserved by&ThinSpace;<a href="https://www.linkedin.com/in/aditya-pratap-singh-220b25186" target="_blank" style="text-decoration: none; ">ADITYA PRATAP SINGH</a>
+                    <p>Coypright &copy; Reserved by&ThinSpace;<a href="https://www.linkedin.com/in/aditya-pratap-singh-220b25186" target="_blank" title="Aditya Pratap Singh - LinkedIn">ADITYA PRATAP SINGH</a>
                     </p>
                 </div>
                 <div>
                     <p>
-                        <a href="#top" style="text-decoration: none; ">Back to Top</a>
+                        <a href="#top">Back to Top</a>
                     </p>
                 </div>
             </div>
