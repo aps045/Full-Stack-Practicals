@@ -9,7 +9,11 @@
             margin: 0;
             padding: 0;
         }
-
+        
+        body {
+            background-color: khaki;
+        }
+        
         .container>.header>ul {
             display: flex;
             justify-content: center;
@@ -19,14 +23,14 @@
             z-index: 5;
             font-family: Calibri;
         }
-
+        
         .container>.header>ul>li {
             list-style: none;
             display: inline-block;
             padding: 16px;
             padding-top: 10px;
         }
-
+        
         .container>.header>ul>li>a {
             width: 100%;
             color: white;
@@ -36,19 +40,19 @@
             transition: all 0.2s;
             padding: 15px;
         }
-
+        
         .container>.header>ul>li>a:hover {
             color: black;
             background: white;
         }
-
+        
         .container>.banner>.image>img {
             height: 100%;
             width: 98%;
             margin: 5% 2% 1% 1%;
             padding-top: 5px;
         }
-
+        
         .container>.banner>.image-content {
             font-size: 72px;
             font-family: sans-serif;
@@ -57,7 +61,7 @@
             top: 120px;
             left: 25px;
         }
-
+        
         .section {
             margin: 4% 0% 1% 0;
             display: flex;
@@ -66,21 +70,21 @@
             font-size: 40px;
             font-family: Cambria;
         }
-
+        
         .container>.section-1 {
             display: flex;
         }
-
+        
         .container>.section-1>.circle>img {
             border-radius: 50%;
             flex-direction: column;
             width: 120%;
         }
-
+        
         .container>.section-2 {
             display: flex;
         }
-
+        
         .container>.section-2>.Main-content {
             background: gray;
             margin: 0 1% 0% 1%;
@@ -90,42 +94,42 @@
             padding: 10px;
             font-family: sans-serif;
         }
-
+        
         .article>.rectangle>img {
             width: 100%;
             height: 262px;
         }
-
+        
         .article>.rectangle1>img {
             width: 100%;
             height: 261px;
             margin-top: 1%;
         }
-
+        
         .article>.rectangle2>img {
             margin-top: 1%;
             width: 100%;
             height: 261px;
         }
-
+        
         .article {
             position: relative;
             margin-right: 1%;
         }
-
+        
         .project {
             position: absolute;
             margin-left: 40%;
             margin-top: 10px;
             font-family: sans-serif;
         }
-
+        
         .box>.html-box>img {
             width: 90%;
             margin: 15px;
             border-radius: 10px;
         }
-
+        
         .box>.html-box {
             display: inline-block;
             margin: 20px 20px 0px 20px;
@@ -135,8 +139,13 @@
             height: 463px;
             box-shadow: 0 4px 8px 0 rgba(9, 35, 185, 0.767);
             font-family: sans-serif;
+            transition: .5s;
         }
-
+        
+        .html-box:hover {
+            background-color: lightsalmon;
+        }
+        
         .html-box>a {
             text-align: center;
             margin-left: 10px;
@@ -152,17 +161,17 @@
             border-radius: 10px;
             transition: all 0.2s;
         }
-
+        
         .html-box>a:hover {
             background: rgb(81, 83, 218);
         }
-
+        
         .top1 {
             text-align: center;
             padding-top: 10px;
             font-size: 20px;
         }
-
+        
         .container>.footer {
             text-align: center;
             background: rgb(253, 94, 227);
@@ -171,7 +180,6 @@
             margin-left: 1%;
             margin-right: 1%;
             color: black;
-
         }
     </style>
 </head>
@@ -215,32 +223,15 @@
         <div class="section-2">
             <div class="Main-content">
                 <h2>About Projects</h2>
-                <p style="padding-top:20px;font-size: 20px;word-spacing: 5px;font-family: Calibri;">Contrary to popular
-                    belief, Lorem Ipsum
-                    is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making
-                    it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia,
-                    looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going
-                    through the cites of the word in classical literature, discovered the undoubtable source. Lorem
-                    Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of
-                    Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very
-                    popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes
-                    from a line in section 1.10.32.
-
-                    The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.
-                    Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in
-                    their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
-                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
-                    classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin
-                    professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words,
-                    consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical
-                    literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33
-                    of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This
-                    book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of
-                    Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-
-                    The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.
-                    Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in
-                    their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+                <p style="padding-top:20px;font-size: 20px;word-spacing: 5px;font-family: Calibri;">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia,
+                    looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and
+                    1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum
+                    dolor sit amet..", comes from a line in section 1.10.32. The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are
+                    also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature
+                    from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites
+                    of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is
+                    a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32. The standard chunk of Lorem Ipsum used since the 1500s is
+                    reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
                 </p>
             </div>
             <div class="article">
@@ -267,8 +258,7 @@
                     <div style="font-size: 22px; font-weight: 560; text-align: center">Introduction to HTML</div>
                     <p style="font-family: Arial; font-size: 18px; font-weight: 360; text-align: justify;
             margin-top: -10px; margin-bottom: 0; padding: 20px">HTML stands for
-                        <i>Hypertext Markup Language</i>, and it is the most widely used language to write Web Pages.
-                        Hypertext refers to the way in which Web pages (HTML documents) are linked together.
+                        <i>Hypertext Markup Language</i>, and it is the most widely used language to write Web Pages. Hypertext refers to the way in which Web pages (HTML documents) are linked together.
                     </p>
                     <a href="../Practicals/Intro-to-HTML.html">Read
                         more</a>
@@ -279,10 +269,7 @@
                     <div style="font-size: 22px; font-weight: 560; text-align: center">Introduction to CSS</div>
                     <p style="font-family: Arial; font-size: 18px; font-weight: 360; text-align: justify;
             margin-top: -10px; margin-bottom: 0; padding: 20px">CSS is short for
-                        <i>Cascading Style Sheets</i>, and is the preferred way for setting the look and feel of a
-                        website. Cascading Style Sheets (CSS) is a markup language responsible for how your web pages
-                        will look
-                        like.
+                        <i>Cascading Style Sheets</i>, and is the preferred way for setting the look and feel of a website. Cascading Style Sheets (CSS) is a markup language responsible for how your web pages will look like.
                     </p>
                     <a href="../Practicals/Intro-to-CSS.html">Read
                         more</a>
@@ -292,11 +279,8 @@
                     <img style="height: 160px" src="../Images/Practical/JavaScript-img.jpg" alt="Javascript Image">
                     <div style="font-size: 22px; font-weight: 560; text-align: center">Introduction to JavaScript</div>
                     <p style="font-family: Arial; font-size: 18px; font-weight: 360; text-align: justify;
-            margin-top: -10px; margin-bottom: 0; padding: 20px">JavaScript often
-                        abbreviated as JS, is a high-level programming language, often just-in-time compiled, and
-                        multi-paradigm. It
-                        has curly-bracket syntax, dynamic typing, prototype-based object-orientation, and first-class
-                        functions.</p>
+            margin-top: -10px; margin-bottom: 0; padding: 20px">JavaScript often abbreviated as JS, is a high-level programming language, often just-in-time compiled, and multi-paradigm. It has curly-bracket syntax, dynamic typing, prototype-based object-orientation, and first-class functions.
+                    </p>
                     <a href="../Practicals/Intro-to-Javascript.html">Read
                         more</a>
                 </div>
@@ -305,11 +289,7 @@
                     <img style="height: 180px" src="../Images/Practical/bootstrap-img.png" alt="Bootstrap Image">
                     <div style="font-size: 22px; font-weight: 560; text-align: center">Introduction to Bootstrap</div>
                     <p style="font-family: Arial; font-size: 18px; font-weight: 360; text-align: justify;
-            margin-top: -10px; margin-bottom: 0; padding: 20px">Bootstrap is a free
-                        and open-source tool collection for creating responsive websites and web applications.
-                        It is the most popular HTML, CSS, and JavaScript framework for developing responsive,
-                        mobile-first web
-                        sites.
+            margin-top: -10px; margin-bottom: 0; padding: 20px">Bootstrap is a free and open-source tool collection for creating responsive websites and web applications. It is the most popular HTML, CSS, and JavaScript framework for developing responsive, mobile-first web sites.
                     </p>
                     <a href="../Practicals/Intro-to-Bootstrap.html">Read
                         more</a>

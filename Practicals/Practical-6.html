@@ -7,9 +7,9 @@
     <title>Practical-6</title>
     <style type="text/css">
         body {
-            background-color: lightgrey;
+            background-color: khaki;
         }
-
+        
         div {
             background-color: white;
             width: 300px;
@@ -19,20 +19,20 @@
             float: left;
             margin: 15px;
         }
-
+        
         img {
             width: 100%;
             height: 210px;
             border-radius: 10px;
         }
-
+        
         p {
             text-align: justify;
             word-spacing: 5px;
             margin-bottom: 10px;
             font-family: Cambria;
         }
-
+        
         h1 {
             text-align: center;
             color: rgb(29, 26, 26);
@@ -41,13 +41,21 @@
             font-family: sans-serif;
             margin: 20px 0px 60px;
         }
-
+        
         h3 {
             margin: 10px;
             text-align: center;
             font-family: sans-serif;
         }
-
+        
+        .box {
+            transition: .5s;
+        }
+        
+        .box:hover {
+            background-color: lightblue;
+        }
+        
         a {
             display: block;
             background-color: red;
@@ -57,10 +65,11 @@
             width: 300px;
             height: 20px;
             text-align: center;
-            padding : 2%;
+            padding: 2%;
             font-family: Calibri;
+            transition: .6s;
         }
-
+        
         a:hover {
             background-color: blue;
         }
@@ -69,38 +78,34 @@
 
 <body>
     <h1>PRACTICAL-6: CREATE FOLLOWING LAYOUT USING CSS LAYOUT PROPERTIES.</h1>
-    <div>
+    <div class="box">
         <img src="../Images/Practical/html-img.png">
         <h3>Introduction to HTML</h3>
-        <p>HTML stands for <i>Hypertext Markup Language</i>, and it is the most widely used language to write Web Pages.
-            Hypertext refers to the way in which Web pages (HTML documents) are linked together. </p>
-        <a href="../Practicals/Intro-to-HTML.html">Read More</a>
+        <p>HTML stands for <i>Hypertext Markup Language</i>, and it is the most widely used language to write Web Pages. Hypertext refers to the way in which Web pages (HTML documents) are linked together. </p>
+        <a href="../Practicals/Intro-to-HTML.html" target="_blank">Read More</a>
     </div>
 
-    <div>
+    <div class="box">
         <img src="../Images/Practical/css-img.png">
         <h3>Introduction to CSS</h3>
-        <p> CSS is short for <i>Cascading Style Sheets</i>, and is the preferred way for setting the look and feel of a
-            website. Cascading Style Sheets (CSS) is a markup language responsible for how your web pages will look
-            like.</p>
-        <a href="../Practicals/Intro-to-CSS.html">Read More</a>
+        <p> CSS is short for <i>Cascading Style Sheets</i>, and is the preferred way for setting the look and feel of a website. Cascading Style Sheets (CSS) is a markup language responsible for how your web pages will look like.
+        </p>
+        <a href="../Practicals/Intro-to-CSS.html" target="_blank">Read More</a>
     </div>
 
-    <div>
+    <div class="box">
         <img src="../Images/Practical/JavaScript-img.jpg">
         <h3>Introduction to JavaScript</h3>
-        <p>JavaScript often abbreviated as JS, is a high-level programming language, often just-in-time compiled, and multi-paradigm. It
-            has curly-bracket syntax, dynamic typing, prototype-based object-orientation, and first-class functions.</p>
-        <a href="../Practicals/Intro-to-Javascript.html">Read More</a>
+        <p>JavaScript often abbreviated as JS, is a high-level programming language, often just-in-time compiled, and multi-paradigm. It has curly-bracket syntax, dynamic typing, prototype-based object-orientation, and first-class functions.</p>
+        <a href="../Practicals/Intro-to-Javascript.html" target="_blank">Read More</a>
     </div>
 
-    <div>
+    <div class="box">
         <img src="../Images/Practical/bootstrap-img.png">
         <h3>Introduction to Bootstrap</h3>
-        <p>Bootstrap is a free and open-source tool collection for creating responsive websites and web applications.
-            It is the most popular HTML, CSS, and JavaScript framework for developing responsive, mobile-first web
-            sites.</p>
-        <a href="../Practicals/Intro-to-Bootstrap.html">Read More</a>
+        <p>Bootstrap is a free and open-source tool collection for creating responsive websites and web applications. It is the most popular HTML, CSS, and JavaScript framework for developing responsive, mobile-first web sites.
+        </p>
+        <a href="../Practicals/Intro-to-Bootstrap.html" target="_blank">Read More</a>
     </div>
 
 </body>
