@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <title>Practical-13</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .content {
+            text-align: center;
+            font-size: 50px;
+            padding: 20px;
+            font-weight: 600;
+        }
+        
+        .footer {
+            width: 99%;
+            margin: 5px auto;
+            background-color: #333;
+            color: white;
+        }
+        
+        .main {
+            display: flex;
+        }
+        
+        .main h2 {
+            text-transform: uppercase;
+            font-size: 25px;
+            padding: 20px 0px;
+            color: white;
+        }
+        
+        .main .about {
+            width: 40%;
+            padding: 10px;
+            font-size: 20px;
+            color: rgb(206, 205, 204);
+        }
+        
+        .main .list {
+            display: flex;
+            width: 60%;
+        }
+        
+        .main a {
+            text-decoration: none;
+            color: rgb(206, 205, 204);
+        }
+        
+        .main .category,
+        .links,
+        .contact {
+            width: 30%;
+            padding: 10px;
+            font-size: 20px;
+            color: rgb(206, 205, 204);
+            line-height: 30px;
+        }
+        
+        .main .contact {
+            width: 360px;
+        }
+        
+        .contact i {
+            padding-right: 5px;
+            font-size: 20px;
+            color: rgb(206, 205, 204);
+        }
+        
+        .contact span {
+            color: rgb(206, 205, 204);
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        .reg {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 16px;
+        }
+        
+        .reg h2 {
+            text-align: center;
+            font-weight: 100;
+            padding: 12px 8px;
+            font-size: 30px;
+            color: rgb(206, 205, 204);
+        }
+        
+        .reg a {
+            background-color: red;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            color: white;
+            font-size: 25px;
+        }
+        
+        .reg a:hover {
+            background-color: blue;
+        }
+        
+        .social {
+            width: 40%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            padding: 16px;
+        }
+        
+        .social i {
+            color: white;
+            font-size: 32px;
+            width: 70px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 25px 16px;
+        }
+        
+        .social a {
+            text-decoration: none;
+        }
+        
+        .social a:hover {
+            border-radius: 50%;
+        }
+        
+        .social a:hover:first-child {
+            background-color: #1877f2;
+        }
+        
+        .social a:hover:nth-child(2) {
+            background-color: #71c9f8;
+        }
+        
+        .social a:hover:nth-child(3) {
+            background-color: #dc4e41;
+        }
+        
+        .social a:hover:nth-child(4) {
+            background-color: #0073b0;
+        }
+        
+        .social a:hover:last-child {
+            background-color: #ea4c89;
+        }
+        
+        .bottom {
+            background-color: rgb(34, 33, 33);
+            font-size: 25px;
+            height: auto;
+        }
+        
+        .bottom p {
+            color: rgb(206, 205, 204);
+            text-align: center;
+            padding: 16px;
+            margin: 0px 20%;
+            position: relative;
+            transition: border-width 0.3s;
+        }
+        
+        .bottom p::after {
+            content: "";
+            display: block;
+            height: 2px;
+            right: 0;
+            width: 0;
+            bottom: 10px;
+            position: absolute;
+            background-color: yellow;
+            transition: all .4s;
+        }
+        
+        .bottom p:hover::after {
+            width: 100%;
+        }
+        
+        .bottom a {
+            text-decoration: none;
+            color: white;
+            transition: .6s;
+        }
+        
+        .bottom a:hover {
+            background-color: grey;
+            padding: 4px;
+            border-radius: 50px;
+        }
+        
+        @media (max-width: 1080px) {
+            .main {
+                display: inline;
+            }
+            .main .about {
+                width: 100%;
+            }
+            .main .list {
+                width: 100%;
+                padding: 0 1%;
+            }
+        }
+        
+        @media (max-width: 800px) {
+            .main .list {
+                display: inline;
+            }
+            .list .category,
+            .links {
+                width: 800px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="content">
+        Content Area
+    </section>
+    <section class="footer">
+        <section class="main">
+            <section class="about">
+                <h2>About Us</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit minus numquam, laudantium hic nesciunt facilis ipsum vel repudiandae quidem molestiae quis fugiat! Iusto earum cum ad quis, at facilis sed repudiandae possimus sapiente
+                    nam enim aspernatur amet odit. Suscipit, accusamus. Nam illo culpa ad, exercitationem officiis blanditiis. In, numquam! Veniam et, cumque possimus rerum blanditiis, animi ut est, tempora libero corrupti perspiciatis ipsa autem dicta
+                    distinctio! Ipsum rem, quas adipisci ullam aspernatur minus praesentium accusamus dignissimos? Inventore, molestiae animi! Non!</p>
+            </section>
+            <section class="list">
+                <section class="category">
+                    <h2>Categories</h2>
+                    <ul>
+                        <li><a href="#">C</a></li>
+                        <li><a href="#">UI Design</a></li>
+                        <li><a href="#">PHP</a></li>
+                        <li><a href="#">Java</a></li>
+                        <li><a href="#">Android</a></li>
+                        <li><a href="#">Hybrid Apps</a></li>
+                    </ul>
+                </section>
+                <section class="links">
+                    <h2>Quick Links</h2>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Contribute</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Sitemap</a></li>
+                        <li><a href="#">Disclaimer</a></li>
+                    </ul>
+                </section>
+                <section class="contact">
+                    <h2>Contact Us</h2>
+                    <ul>
+                        <li><i class="fa fa-home"></i><span>XYZ, Area 51, Nevada</span></li>
+                        <li><i class="fa fa-envelope"></i><a href="#">abc@PQR.com</a></li>
+                        <li><i class="fa fa-phone"></i><span>+YY XXXXX XXXXX</span></li>
+                        <li><i class="fa fa-github"></i><a href="https://www.github.com">GitHub - ABC</a></li>
+                    </ul>
+                </section>
+            </section>
+        </section>
+        <hr width="100%">
+        <section class="reg">
+            <h2>Register for Free</h2>
+            <a href="#">Sign Up</a>
+        </section>
+        <hr width="100%">
+        <section class="social">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-google"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-dribbble"></i></a>
+        </section>
+        <hr width="100%">
+        <section class="bottom">
+            <p>Copyright &copy; 2020 All Rights Reserved By
+                <a href="https://www.aps045.github.io/Full-Stack-Practicals">Full-Stack-Live-Webpage</a>
+            </p>
+        </section>
+    </section>
+</body>
+
+</html>
