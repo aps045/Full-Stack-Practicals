@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <title>Practical-14</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        body {
+            background-color: lightgray;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        header h1 {
+            text-transform: uppercase;
+            color: red;
+            font-size: 80px;
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        .main {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        /* FORM - 1 */
+        
+        .form-1 {
+            width: 300px;
+            height: 350px;
+            background-color: #fff;
+            margin: 64px;
+        }
+        
+        .form-1 .form-head {
+            width: 100%;
+            height: 100px;
+            background: linear-gradient(to right, orange, red);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .form-1 .form-head h1 {
+            color: white;
+            font-size: 20px;
+            padding: 10px 0px;
+        }
+        
+        .form-1 .form-head .social i {
+            color: white;
+            font-size: 20px;
+            padding: 10px 10px;
+        }
+        
+        .form-1 .form-container {
+            padding: 20px;
+        }
+        
+        input[type='email'] {
+            outline: none;
+            border: none;
+            border-bottom: 1px solid grey;
+            padding: 10px 0px;
+            width: 100%;
+        }
+        
+        input[type='password'] {
+            outline: none;
+            border: none;
+            border-bottom: 1px solid grey;
+            padding: 10px 0px;
+            width: 100%;
+        }
+        
+        .form-1 .form-container p {
+            font-size: 12px;
+            color: grey;
+            padding: 20px 0;
+            text-align: right;
+        }
+        
+        .form-1 .form-container p b {
+            color: black;
+        }
+        
+        input[type='submit'] {
+            outline: none;
+            border: none;
+            border-radius: 20px;
+            background-color: rgb(90, 90, 90);
+            color: white;
+            padding: 10px 20px;
+            margin-top: 30px;
+        }
+        
+        .form-1 .form-container #p2 {
+            display: inline-block;
+            margin-left: 8px;
+        }
+        /* FORM - 2 */
+        
+        .form-2 {
+            width: 300px;
+            height: 350px;
+            background-color: #fff;
+            margin: 64px;
+        }
+        
+        .form-2 .form-head {
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .form-2 .form-head h1 {
+            color: deeppink;
+            font-size: 20px;
+            padding: 10px 0px;
+        }
+        
+        .form-2 .form-container {
+            padding: 20px;
+        }
+        
+        input[type='email'] {
+            outline: none;
+            border: none;
+            border-bottom: 1px solid grey;
+            padding: 10px 0px;
+            width: 100%;
+        }
+        
+        input[type='password'] {
+            outline: none;
+            border: none;
+            border-bottom: 1px solid grey;
+            padding: 10px 0px;
+            width: 100%;
+        }
+        
+        input[type='checkbox'] {
+            margin: 20px 0;
+        }
+        
+        .form-2 .form-container p {
+            display: inline-block;
+            font-size: 12px;
+            color: grey;
+        }
+        
+        .form-2 .form-container p b {
+            color: #3498db;
+        }
+        
+        .form-2 input[type='submit'] {
+            outline: none;
+            border: none;
+            border-radius: 20px;
+            background-color: deeppink;
+            color: white;
+            padding: 10px 20px;
+            margin-top: 30px;
+        }
+        
+        .form-2 .form-container #p3 {
+            display: inline-block;
+            margin-left: 16px;
+            margin-bottom: 25px;
+        }
+        
+        .form-2 .form-footer {
+            background-color: #778899;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .form-2 .form-footer .social i {
+            color: white;
+            font-size: 20px;
+            padding: 10px 10px;
+        }
+        /* FORM - 3 */
+        
+        .form-3 {
+            width: 300px;
+            height: 350px;
+            background-color: #fff;
+            margin: 64px;
+        }
+        
+        .form-3 .form-head {
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .form-3 .form-head h1 {
+            color: black;
+            font-size: 20px;
+            padding: 10px 0px;
+        }
+        
+        .form-3 .form-container {
+            padding: 20px;
+        }
+        
+        input[type='email'] {
+            outline: none;
+            border: none;
+            border-bottom: 1px solid grey;
+            padding: 10px 0px;
+            width: 100%;
+        }
+        
+        input[type='password'] {
+            outline: none;
+            border: none;
+            border-bottom: 1px solid grey;
+            padding: 10px 0px;
+            width: 100%;
+        }
+        
+        .form-3 .form-container p {
+            font-size: 12px;
+            color: #3498db;
+            padding: 20px 0;
+            text-align: right;
+        }
+        
+        .form-3 .form-container p #p4 {
+            color: black;
+            text-align: center;
+            margin-top: -5px;
+        }
+        
+        .form-3 .form-container [type='submit'] {
+            outline: none;
+            border: none;
+            border-radius: 20px;
+            display: block;
+            width: 100%;
+            background: linear-gradient(to right, skyblue, blue);
+            color: white;
+            padding: 10px 20px;
+            margin-top: 0px;
+        }
+        
+        .form-3 .form-footer {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .form-3 .form-footer .social i {
+            color: #3498db;
+            font-size: 20px;
+            text-align: center;
+            width: 70px;
+            border-radius: 20px;
+            padding: 10px 10px;
+            box-shadow: 2px 2px 5px #3498db;
+            margin-top: -10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>
+            Form Template
+        </h1>
+    </header>
+    <div class="main">
+
+        <!-- Form Template - 1 -->
+
+        <div class="form-1">
+            <div class="form-head">
+                <h1>
+                    Log in
+                </h1>
+                <div class="social">
+                    <i class="fa fa-facebook"></i>
+                    <i class="fa fa-twitter"></i>
+                    <i class="fa fa-google"></i>
+                </div>
+            </div>
+            <div class="form-container">
+                <div>
+                    <input type="email" name="email" id="email" placeholder="Your Email" />
+                </div>
+                <div>
+                    <input type="password" name="pwd" id="pwd" placeholder="Your Password" />
+                </div>
+                <p>
+                    Forgot <b>Password ?</b>
+                </p>
+                <input type="submit" value="LOG IN" />
+                <p id="p2">Don't have account ?
+                    <b>Sign Up</b>
+                </p>
+            </div>
+            <div class="form-footer"></div>
+        </div>
+
+        <!-- Form Template - 2 -->
+
+        <div class="form-2">
+            <div class="form-head">
+                <h1>
+                    Sign up
+                </h1>
+            </div>
+            <div class="form-container">
+                <div>
+                    <input type="email" name="email" id="email" placeholder="Your Email" />
+                </div>
+                <div>
+                    <input type="password" name="pwd" id="pwd" placeholder="Your Password" />
+                </div>
+                <input type="checkbox" name="chk" id="chk">
+                <p>
+                    Accept the <b>Terms and Conditions</b>
+                </p>
+                <input type="submit" value="SIGN UP" />
+                <p id="p3">Have an account ?
+                    <b>Sign In</b>
+                </p>
+            </div>
+            <div class="form-footer">
+                <div class="social">
+                    <i class="fa fa-facebook"></i>
+                    <i class="fa fa-twitter"></i>
+                    <i class="fa fa-google"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Form Template - 3 -->
+
+        <div class="form-3">
+            <div class="form-head">
+                <h1>
+                    Sign in
+                </h1>
+            </div>
+            <div class="form-container">
+                <div>
+                    <input type="email" name="email" id="email" placeholder="Your Email" />
+                </div>
+                <div>
+                    <input type="password" name="pwd" id="pwd" placeholder="Your Password" />
+                </div>
+                <p>
+                    Forgot <b>Password ?</b>
+                </p>
+                <input type="submit" value="SIGN IN" />
+                <p id="p4">
+                    <b>Or sign in with</b>
+                </p>
+            </div>
+            <div class="form-footer">
+                <div class="social">
+                    <i class="fa fa-facebook"></i>
+                    <i class="fa fa-twitter"></i>
+                    <i class="fa fa-google"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
