@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 17</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            background-position: center;
+            background-size: cover;
+        }
+        
+        #time {
+            font-size: 8rem;
+            font-family: Lucida Console;
+        }
+        
+        h1,
+        h2 {
+            margin-bottom: 10px;
+            font-size: 3rem;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        
+        h2 {
+            font-size: 5rem;
+            font-family: Calibri;
+        }
+        
+        time {
+            font-size: 130px;
+        }
+        
+        #greeting {
+            margin-bottom: 16px;
+        }
+        
+        #date {
+            font-size: 25px;
+            margin-top: 16px;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+
+
+<body>
+    <time id="time"></time>
+    <h1 id="greeting"></h1>
+    <h2 id="name" contenteditable="true"></h2>
+    <h3 id="date"></h3>
+    <script>
+        const time = document.getElementById('time');
+        const greeting = document.getElementById('greeting');
+        const name = document.getElementById('name');
+        const day = document.getElementById('date');
+
+        name.addEventListener('keypress', setname);
+        name.addEventListener('blur', setname);
+
+        function show() {
+            let today = new Date();
+            let hr = today.getHours();
+            let min = today.getMinutes();
+            let sec = today.getSeconds();
+            let date = today.toDateString();
+
+            let ampm = hr >= 12 ? 'PM' : 'AM';
+
+            if (hr == 24) {
+                hr = 0;
+            } else {
+                hr = hr % 12 || 12;
+            }
+
+            time.innerHTML = `${addZero(hr)}<span>:</span>${addZero(min)}<span>:</span>${addZero(sec)} ${ampm}`;
+            day.innerHTML = `${date}`;
+            setTimeout(show, 1000);
+        }
+
+        function addZero(n) {
+            return ((parseInt(n, 10) < 10 ? '0' : '') + n);
+        }
+
+        function greet() {
+            let today = new Date();
+            let hour = today.getHours();
+            if (hour < 12) {
+                greeting.innerHTML = 'Good Morning';
+                document.body.style.backgroundImage = 'url("../Images/Practical-17/Sunrise.jpg")';
+            } else if (hour < 18) {
+                greeting.innerHTML = 'Good Afternoon';
+                document.body.style.backgroundImage = 'url("../Images/Practical-17/Noon.jpg")';
+            } else {
+                greeting.innerHTML = 'Good Evening';
+                document.body.style.backgroundImage = 'url("../Images/Practical-17/Evening.jpg")';
+                document.body.style.color = 'white';
+            }
+        }
+
+        function getName() {
+            if (localStorage.getItem('myName') == null) {
+                name.innerHTML = 'Enter Name';
+            } else {
+                name.innerHTML = localStorage.getItem('myName');
+            }
+        }
+
+        function setname(e) {
+            if (e.type == "keypress") {
+                if (e.keyCode == 13) {
+                    localStorage.setItem('myName', e.target.innerHTML);
+                    name.blur();
+                }
+            } else {
+                localStorage.setItem('myName', e.target.innerHTML);
+            }
+        }
+
+        show();
+        greet();
+        getName();
+    </script>
+    <!-- <img src="../Images/Practical-17/Evening.jpg" alt=""> -->
+</body>
+
+</html>
