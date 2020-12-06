@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical-19</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab&family=Ubuntu&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: darkgray;
+            height: 100vh;
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .container {
+            height: 400px;
+            width: 360px;
+            background-color: #fff;
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .container form {
+            position: absolute;
+            top: 80px;
+            left: 40px;
+            width: 280px;
+            transition: 1s;
+        }
+        
+        form h3 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #777;
+        }
+        
+        form input {
+            width: 100%;
+            margin: 5px 0;
+            padding: 10px 5px;
+            border: none;
+            outline: none;
+            border-bottom: 1px solid #777;
+            background: transparent;
+            font-family: 'Roboto Slab', serif;
+        }
+        
+        .btn-box {
+            margin: 30px auto;
+            text-align: center;
+        }
+        
+        form button {
+            height: 35px;
+            width: 120px;
+            background-color: crimson;
+            outline: none;
+            border: none;
+            color: white;
+            border-radius: 10px;
+            font-family: 'Ubuntu', sans-serif;
+        }
+        
+        form button:hover {
+            cursor: pointer;
+        }
+        
+        #form-2 {
+            left: 450px;
+        }
+        
+        #form-3 {
+            left: 450px;
+        }
+        
+        .step-row {
+            width: 360px;
+            height: 40px;
+            box-shadow: 0 -1px 5px -1px #000;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        
+        .step-col {
+            width: 120px;
+            text-align: center;
+            color: black;
+            font-weight: 700;
+            z-index: 1;
+        }
+        
+        #progress {
+            width: 120px;
+            height: 100%;
+            position: absolute;
+            background-color: crimson;
+            transition: .5s;
+        }
+        
+        #progress::after {
+            content: '';
+            width: 0px;
+            height: 0px;
+            position: absolute;
+            border-top: 20px solid transparent;
+            border-bottom: 20px solid transparent;
+            right: -20px;
+            top: 0px;
+            border-left: 20px solid crimson;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form id="form-1">
+            <h3>CREATE ACCOUNT</h3>
+            <input type="text" placeholder="Enter E-mail">
+            <input type="password" placeholder="Enter Password">
+            <input type="password" placeholder="Confirm Password">
+            <div class="btn-box">
+                <button type="button" id="next-1">Next</button>
+            </div>
+        </form>
+
+        <form id="form-2">
+            <h3>SOCIAL LINKS</h3>
+            <input type="text" placeholder="Linkedin-Id">
+            <input type="text" placeholder="Github-Id">
+            <input type="text" placeholder="Facebook-Id">
+            <div class="btn-box">
+                <button type="button" id="back-1">Back</button>
+                <button type="button" id="next-2">Next</button>
+            </div>
+        </form>
+
+        <form id="form-3">
+            <h3>PERSONAL INFORMATION</h3>
+            <input type="text" placeholder="Enter First-Name">
+            <input type="text" placeholder="Enter Last-Name">
+            <input type="text" placeholder="Enter Mobile No.">
+            <div class="btn-box">
+                <button type="button" id="back-2">Back</button>
+                <button type="submit" id="submit">Submit</button>
+            </div>
+        </form>
+
+        <div class="step-row">
+            <div id="progress"></div>
+            <div class="step-col"><small>Step-1</small></div>
+            <div class="step-col"><small>Step-2</small></div>
+            <div class="step-col"><small>Step-3</small></div>
+        </div>
+    </div>
+    <script>
+        //SELECTORS
+        const form_1 = document.getElementById("form-1");
+        const form_2 = document.getElementById("form-2");
+        const form_3 = document.getElementById("form-3");
+
+        const back_1 = document.getElementById("back-1");
+        const back_2 = document.getElementById("back-2");
+        const next_1 = document.getElementById("next-1");
+        const next_2 = document.getElementById("next-2");
+
+        const progress = document.getElementById("progress");
+
+        const submit = document.getElementById("submit");
+
+        //EVENT HANDLERS
+
+        next_1.onclick = function() {
+            form_1.style.left = "-450px";
+            form_2.style.left = "40px";
+            progress.style.width = "240px";
+        }
+
+        next_2.onclick = function() {
+            form_2.style.left = "-450px";
+            form_3.style.left = "40px";
+            progress.style.width = "360px";
+        }
+
+        back_1.onclick = function() {
+            form_1.style.left = "40px";
+            form_2.style.left = "450px";
+            progress.style.width = "120px";
+        }
+
+        back_2.onclick = function() {
+            form_2.style.left = "40px";
+            form_3.style.left = "450px";
+            progress.style.width = "240px";
+        }
+
+        submit.onclick = function() {
+            window.alert("Form is submitted successfully");
+        }
+    </script>
+</body>
+
+</html>
